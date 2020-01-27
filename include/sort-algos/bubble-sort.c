@@ -7,7 +7,7 @@
 #include <sort-algos/bubble-sort.h>
 #include <data-swap.h>
 
-void bubble_sort(const void *data_start, const void *data_end, size_t item_size,
+void bubble_sort(void *data_start, void *data_end, size_t item_size,
                  bool (*cmp_func)(const void *, const void *)) {
     void *cursor_stop = (void *) data_end;
     cursor_stop -= item_size;

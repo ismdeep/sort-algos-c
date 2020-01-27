@@ -7,7 +7,7 @@
 
 #include <stdbool.h>
 
-void selection_sort(const void *data_start, const void *data_end, size_t item_size,
+void selection_sort(void *data_start, void *data_end, size_t item_size,
                  bool (*cmp_func)(const void *, const void *));
 
 
