@@ -12,6 +12,7 @@ void sort_test(
         const double *data,
         int data_size,
         void (*sort_func)(const void *, const void *, size_t, bool (*)(const void *, const void *)),
+        char *sort_func_name,
         bool (*cmp_func) (const void *, const void *)
 );
 

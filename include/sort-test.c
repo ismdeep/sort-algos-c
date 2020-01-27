@@ -12,6 +12,7 @@ void sort_test(
         const double *data,
         int data_size,
         void (*sort_func)(const void *, const void *, size_t, bool (*)(const void *, const void *)),
+        char *sort_func_name,
         bool (*cmp_func)(const void *, const void *)
 ) {
 
@@ -23,7 +24,7 @@ void sort_test(
     /* Sort array **sort_data** with **sort_func()** algorithm */
     struct timeval *start_point = create_start_point();
     sort_func(sort_data, sort_data + data_size, sizeof(double), cmp_func);
-    printf("Time elapse[selection sort]: %.2lf ms\n", stop_watch_us(start_point) / 1000.0);
+    printf("Time elapse[%s]: %.2lf ms\n", sort_func_name, stop_watch_us(start_point) / 1000.0);
 
     /* Assert sort result */
     if (sorted_assert(data, data + data_size, sort_data, sort_data + data_size, sizeof(double), cmp_func)) {

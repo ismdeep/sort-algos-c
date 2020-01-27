@@ -4,7 +4,6 @@
 
 #include <time-utils.h>
 
-
 struct timeval *create_start_point() {
     struct timeval *t = (struct timeval *) malloc(sizeof(struct timeval));
     gettimeofday(t, NULL);

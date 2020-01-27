@@ -9,6 +9,7 @@ add_executable(sort-algos-c
         include/data-swap.c
         include/sort-algos/selection-sort.c
         include/sort-algos/bubble-sort.c
+        include/sort-algos/insertion-sort.c
         include/sorted-assert.c
         include/sort-test.c
         include/time-utils.c
