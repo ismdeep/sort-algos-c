@@ -10,8 +10,8 @@
 #include <sort-algos/bubble-sort.h>
 #include <sort-algos/insertion-sort.h>
 #include <sort-algos/quick-sort.h>
+#include <sort-algos/cocktail-sort.h>
 #include <sort-test.h>
-
 
 #define ARR_SIZE 2000
 
@@ -31,8 +31,9 @@ int main() {
     /* Testing sort functions */
     sort_test(raw_data, ARR_SIZE, selection_sort, "selection_sort", (bool (*)(const void *, const void *)) cmp);
     sort_test(raw_data, ARR_SIZE, bubble_sort, "bubble_sort", (bool (*)(const void *, const void *)) cmp);
+    sort_test(raw_data, ARR_SIZE, cocktail_sort, "cocktail_sort", (bool (*)(const void *, const void *)) cmp);
     sort_test(raw_data, ARR_SIZE, insertion_sort, "insertion_sort", (bool (*)(const void *, const void *)) cmp);
     sort_test(raw_data, ARR_SIZE, quick_sort, "quick_sort", (bool (*)(const void *, const void *)) cmp);
-
+    
     return 0;
 }
