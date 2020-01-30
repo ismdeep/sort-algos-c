@@ -12,8 +12,7 @@ void quick_sort(void *data_start, void *data_end, size_t item_size,
                 bool (*cmp_func)(const void *, const void *)) {
     if (data_start >= data_end - item_size)
         return;
-    void *mid = (void *) malloc(sizeof(void) * item_size);
-    memcpy(mid, data_end - item_size, item_size);
+    void *mid = data_end - item_size;
     void *left = data_start;
     void *right = data_end - item_size - item_size;
 
