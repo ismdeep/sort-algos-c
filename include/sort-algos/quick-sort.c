@@ -30,7 +30,7 @@ void quick_sort(void *data_start, void *data_end, size_t item_size,
         left += item_size;
         data_swap(left, data_end - item_size, item_size);
     }
-    if (left)
+    if (left != data_start)
         quick_sort(data_start, left, item_size, cmp_func);
     quick_sort(left + item_size, data_end, item_size, cmp_func);
 }

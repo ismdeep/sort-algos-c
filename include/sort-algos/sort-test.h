@@ -9,8 +9,9 @@
 #include <stdbool.h>
 
 void sort_test(
-        const double *data,
-        int data_size,
+        void *data_start,
+        void *data_end,
+        size_t item_size,
         void (*sort_func)(void *, void *, size_t, bool (*)(const void *, const void *)),
         char *sort_func_name,
         bool (*cmp_func) (const void *, const void *)

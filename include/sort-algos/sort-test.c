@@ -4,32 +4,34 @@
 
 #include <time-utils.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sorted-assert.h>
 #include <sys/time.h>
 #include <time.h>
 
 void sort_test(
-        const double *data,
-        int data_size,
+        void *data_start,
+        void *data_end,
+        size_t item_size,
         void (*sort_func)(void *, void *, size_t, bool (*)(const void *, const void *)),
         char *sort_func_name,
         bool (*cmp_func)(const void *, const void *)
 ) {
 
     /* Copy data from raw to selection_sort_data */
-    double *sort_data = (double *) malloc(sizeof(double) * data_size);
-    for (int i = 0; i < data_size; i++) {
-        sort_data[i] = data[i];
-    }
+    void *sort_data = (void *) malloc( data_end - data_start );
+    memcpy(sort_data, data_start, data_end - data_start);
+
     /* Sort array **sort_data** with **sort_func()** algorithm */
     struct timeval *start_point = create_start_point();
-    sort_func(sort_data, sort_data + data_size, sizeof(double), cmp_func);
+    sort_func(sort_data, sort_data + (data_end - data_start), item_size, cmp_func);
     printf("Time elapse[%s]: %.2lf ms\n", sort_func_name, stop_watch_us(start_point) / 1000.0);
 
     /* Assert sort result */
-    if (sorted_assert(data, data + data_size, sort_data, sort_data + data_size, sizeof(double), cmp_func)) {
-        printf("Successfully.\n");
+    if (sorted_assert(data_start, data_end, sort_data, sort_data + (data_end - data_start), item_size, cmp_func)) {
+        printf("Successfully.\n\n");
     } else {
-        printf("Unsuccessfully.\n");
+        printf("Unsuccessfully.\n\n");
     }
 }
