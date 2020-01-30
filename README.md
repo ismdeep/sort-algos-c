@@ -1,5 +1,5 @@
 # Sort Algos in C
-Sort Algorithm General Implementations in C Language
+Sorting Algorithms General Implementations in C Programming Language
 
 
 
