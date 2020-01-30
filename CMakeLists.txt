@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 project(sort-algos C)
 project(sort-algos-int C)
 project(sort-algos-int-with-func C)
