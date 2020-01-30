@@ -54,6 +54,6 @@ bool sorted_assert(
         cursor += item_size;
     }
 
-		free(used);
+    free(used);
     return true;
 }

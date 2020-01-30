@@ -36,6 +36,6 @@ void sort_test(
         printf("Unsuccessfully.\n\n");
     }
 
-		free(sort_data);
-		free(start_point);
+    free(sort_data);
+    free(start_point);
 }
