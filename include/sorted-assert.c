@@ -53,5 +53,7 @@ bool sorted_assert(
         }
         cursor += item_size;
     }
+
+    free(used);
     return true;
 }

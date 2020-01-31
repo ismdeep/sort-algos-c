@@ -35,4 +35,7 @@ void sort_test(
     } else {
         printf("Unsuccessfully.\n\n");
     }
+
+    free(sort_data);
+    free(start_point);
 }
