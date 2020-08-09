@@ -6,13 +6,14 @@
 #define SORT_ALGOS_INT_WITH_FUNC_SORT_TEST_H
 
 #include <stdbool.h>
+#include <sort-base.h>
 
 void sort_test(
         int data[],
         int len,
-        void (*sort_func)(int [], int, bool(*)(const int*, const int*)),
+        sort_int_func_t sort_func,
         char *sort_func_name,
-        bool (*cmp_func)(const int*, const int*)
+        cmp_int_func_t cmp_func
 );
 
 #endif //SORT_ALGOS_INT_WITH_FUNC_SORT_TEST_H

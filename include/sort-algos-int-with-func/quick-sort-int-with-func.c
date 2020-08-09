@@ -7,7 +7,7 @@
 #include <stdbool.h>
 #include <data-swap.h>
 
-void quick_sort(int a[], int len, bool (*cmp_func)(const int *, const int *)) {
+void quick_sort(int a[], int len, cmp_int_func_t cmp_func) {
     if (len <= 1)
         return;
     int mid = a[len - 1];

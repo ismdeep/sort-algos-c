@@ -18,7 +18,7 @@ bool sorted_assert(
         const void *raw_data_start, const void *raw_data_end,
         const void *sorted_data_start, const void *sorted_data_end,
         size_t item_size,
-        bool (*cmp_func)(const void *, const void *)) {
+        cmp_func_t cmp_func) {
 
     size_t count = (raw_data_end - raw_data_start) / item_size;
     bool *used = (bool *) malloc(sizeof(bool) * count);

@@ -29,11 +29,11 @@ int main() {
     }
 
     /* Testing sort functions */
-    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), selection_sort, "selection_sort", (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), bubble_sort,    "bubble_sort",    (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), cocktail_sort,  "cocktail_sort",  (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), insertion_sort, "insertion_sort", (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), quick_sort,     "quick_sort",     (bool (*)(const void *, const void *)) cmp);
+    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), selection_sort, "selection_sort", (cmp_func_t) cmp);
+    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), bubble_sort,    "bubble_sort",    (cmp_func_t) cmp);
+    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), cocktail_sort,  "cocktail_sort",  (cmp_func_t) cmp);
+    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), insertion_sort, "insertion_sort", (cmp_func_t) cmp);
+    sort_test(raw_data, raw_data + ARR_SIZE, sizeof(double), quick_sort,     "quick_sort",     (cmp_func_t) cmp);
 
     return 0;
 }

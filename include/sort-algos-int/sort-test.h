@@ -9,13 +9,14 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sort-base.h>
 
 void sort_test(
         int a[],
         int len,
         void (*sort_func)(int [], int),
         char *sort_func_name,
-        bool (*cmp_func)(const void *, const void *)
+        cmp_func_t cmp_func
 );
 
 #endif //SORT_ALGOS_INT_WITH_FUNC_SORT_TEST_H

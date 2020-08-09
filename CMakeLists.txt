@@ -18,6 +18,7 @@ add_executable(sort-algos
         include/sorted-assert.c
         include/sort-algos/sort-test.c
         include/time-utils.c
+        include/sort-base.h
         sort-algos.c)
 
 add_executable(sort-algos-int
@@ -31,6 +32,7 @@ add_executable(sort-algos-int
         include/data-swap.c
         include/sort-algos-int/sort-test.c
         include/time-utils.c
+        include/sort-base.h
         sort-algos-int.c)
 
 add_executable(sort-algos-int-with-func
@@ -44,4 +46,5 @@ add_executable(sort-algos-int-with-func
         include/data-swap.c
         include/sort-algos-int-with-func/sort-test.c
         include/time-utils.c
+        include/sort-base.h
         sort-algos-int-with-func.c)

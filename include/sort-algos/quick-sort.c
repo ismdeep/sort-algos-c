@@ -8,8 +8,7 @@
 #include <sort-algos/quick-sort.h>
 
 
-void quick_sort(void *data_start, void *data_end, size_t item_size,
-                bool (*cmp_func)(const void *, const void *)) {
+void quick_sort(void *data_start, void *data_end, size_t item_size, cmp_func_t cmp_func) {
     if (data_start >= data_end - item_size)
         return;
     void *mid = data_end - item_size;

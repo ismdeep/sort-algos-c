@@ -7,14 +7,15 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <sort-base.h>
 
 void sort_test(
         void *data_start,
         void *data_end,
         size_t item_size,
-        void (*sort_func)(void *, void *, size_t, bool (*)(const void *, const void *)),
+        sort_func_t sort_func,
         char *sort_func_name,
-        bool (*cmp_func) (const void *, const void *)
+        cmp_func_t cmp_func
 );
 
 #endif //SORT_ALGOS_C_SORT_TEST_H
