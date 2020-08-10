@@ -6,7 +6,7 @@
 
 #include <stdbool.h>
 
-void insertion_sort(int a[], int len, bool (*cmp_func)(const int *, const int *)) {
+void insertion_sort(int a[], int len, cmp_int_func_t cmp_func) {
     for (int left = 0; left < len; left++) {
         int min_p = left;
         for (int cur = min_p + 1; cur < len; cur++) {

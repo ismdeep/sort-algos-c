@@ -6,7 +6,7 @@
 
 #include <data-swap.h>
 
-void bubble_sort(int a[], int len, bool (*cmp_func)(const int *, const int *)) {
+void bubble_sort(int a[], int len, cmp_int_func_t cmp_func) {
     for (int stop = len - 1; stop > 0; stop--) {
         for (int i = 0; i < stop; i++) {
             if ( !cmp_func(&a[i], &a[i+1])) {

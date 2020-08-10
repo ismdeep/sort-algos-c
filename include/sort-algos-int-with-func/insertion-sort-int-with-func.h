@@ -6,7 +6,8 @@
 #define SORT_ALGOS_INT_WITH_FUNC_INSERTION_SORT_INT_WITH_FUNC_H
 
 #include <stdbool.h>
+#include <sort-base.h>
 
-void insertion_sort(int a[], int len, bool (*cmp_func)(const int *, const int *));
+void insertion_sort(int a[], int len, cmp_int_func_t cmp_func);
 
 #endif //SORT_ALGOS_INT_WITH_FUNC_INSERTION_SORT_INT_WITH_FUNC_H

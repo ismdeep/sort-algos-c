@@ -16,7 +16,7 @@ void sort_test(
         int len,
         void (*sort_func)(int [], int),
         char *sort_func_name,
-        bool (*cmp_func)(const void *, const void *)
+        cmp_func_t cmp_func
 ) {
     /* Copy data from raw to selection_sort_data */
     int *sort_data = (int *) malloc(sizeof(int) * len );

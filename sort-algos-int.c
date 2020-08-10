@@ -26,11 +26,11 @@ int main() {
         raw_data[i] = (int) (random() % 1000);
     }
 
-    sort_test(raw_data, ARR_SIZE, selection_sort, "selection_sort", (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, ARR_SIZE, bubble_sort   , "bubble_sort"   , (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, ARR_SIZE, cocktail_sort , "cocktail_sort" , (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, ARR_SIZE, insertion_sort, "insertion_sort", (bool (*)(const void *, const void *)) cmp);
-    sort_test(raw_data, ARR_SIZE, quick_sort    , "quick_sort"    , (bool (*)(const void *, const void *)) cmp);
+    sort_test(raw_data, ARR_SIZE, selection_sort, "selection_sort", (cmp_func_t) cmp);
+    sort_test(raw_data, ARR_SIZE, bubble_sort   , "bubble_sort"   , (cmp_func_t) cmp);
+    sort_test(raw_data, ARR_SIZE, cocktail_sort , "cocktail_sort" , (cmp_func_t) cmp);
+    sort_test(raw_data, ARR_SIZE, insertion_sort, "insertion_sort", (cmp_func_t) cmp);
+    sort_test(raw_data, ARR_SIZE, quick_sort    , "quick_sort"    , (cmp_func_t) cmp);
 
     return 0;
 }

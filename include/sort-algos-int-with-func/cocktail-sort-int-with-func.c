@@ -4,7 +4,7 @@
 
 #include <sort-algos-int-with-func/cocktail-sort-int-with-func.h>
 
-void cocktail_sort(int a[], int len, bool (*cmp_func)(const int *, const int *)) {
+void cocktail_sort(int a[], int len, cmp_int_func_t cmp_func) {
     int i, left = 0, right = len - 1;
     int temp;
     while (left < right) {
